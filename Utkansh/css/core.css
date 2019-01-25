@@ -1,36 +1,58 @@
-.team{
+
+.core-head{
+    height: auto;
+    text-align:center;
 }
 .member{
-    width : 33%;
+    display: inline-block;
+    width : 25%;
     height: auto;
 }
 .member_pic{
-    width : 100%;
+    width : 70%;
+    margin : 0 auto;
+    transition: 0.3s;
 }
 .member_pic img{
+    border-radius: 5%;
     width : 100%;
-    opacity: 0.5;
 }
+ 
 .member_desc{
-    background-color: black;
+    width : 70%;
+    margin: 0 auto;
+    background-color: #ded9d9;
     font-size: 1.5vw;
     text-align : center;
     position : relative;
     z-index: -1;
+    border-radius: 6%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .member_details{
     position : relative;
     
 }
 p{
-    color: white;
+    color: black;
     padding: 0;
     margin : 0;
 }
 .social_icon{
     position: relative;
-    float: right;
+    width:84px;
+    
 }
 .social_icon img{
     width: 40px;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.social_icon img:hover{
+    opacity: 1;}
+@media only screen and (max-width:768px){
+    .member{
+        display:block;
+        width:90%;
+    }
 }
