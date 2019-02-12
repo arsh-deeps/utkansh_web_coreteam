@@ -1,0 +1,177 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+.core-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.member{
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    height: 300px;
+    width: 250px;
+    margin: auto;
+    margin-top: 40px;
+    opacity: 0;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+.mshow{
+    animation-fill-mode: forward;
+    animation-timing-function: linear;
+    animation: ani 0.7s;
+    opacity: 1;
+}
+.mleft{
+     animation-fill-mode: forward;
+    animation-timing-function: linear;
+    animation: aniLeft 0.9s;
+    opacity: 1;
+}
+.mright{
+     animation-fill-mode: forward;
+    animation-timing-function: linear;
+    animation: aniRight 0.9s;
+    opacity: 1;
+}
+@keyframes aniLeft{
+    0%{opacity: 0;
+        transform: scale(0.3,0.3);
+        transform: translateX(-90px);
+    }
+    100%{opacity: 1;
+        transform: scale(1,1);
+        transform: translateX(0);
+    }
+}
+@keyframes aniRight{
+    0%{opacity: 0;
+        transform: scale(0.3,0.3);
+        transform: translateX(90px);
+    }
+    100%{opacity: 1;
+        transform: scale(1,1);
+        transform: translateX(0);
+    }
+}
+@keyframes ani{
+    0%{opacity: 0;
+        transform: scale(0.1,0.1);}
+    100%{opacity: 1;
+        transform: scale(1,1);}
+}
+
+.member-pic{
+    border-radius: 10px;
+    background-color: #bbb;
+    z-index:1;
+    position: absolute;
+    height: 300px;
+    width: 250px;
+    transition: 0.5s;
+}
+.member-pic img{
+    border-radius: 10px;
+    height: 300px;
+    width: 100%;
+}
+.member-pic:hover {
+    transform: scale(1.2,1.2);
+}
+.member-over{
+    background-color: black;
+    opacity:0.5;
+    color: white;
+    text-shadow: 8px black;
+    z-index:2;
+    text-align: center;
+    position: absolute;
+    top:235px;
+    margin: auto auto auto auto;
+    width: 100%;
+    height: 65px;
+    border-radius: 0 0 10px 10px;
+}
+.member-data{
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+}
+.member-data h2,.member-data p{
+    margin: 2px auto 2px auto;
+}
+.social_icon{
+    width: 100px;
+    height: 45px;
+    z-index: 3;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+.social_icon img{
+    width:45px;
+    height:45px;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.social_icon img:hover{
+    opacity: 1;
+}
+.team_name{
+    color: lightslategray;
+    text-align: center;
+    margin: 40px auto 0 auto;
+}
+
+
+
+
+@media only screen and (max-width: 620px) and (orientation: landscape)
+{
+    .core-container{
+        display: block;
+    }
+}
+@media only screen and (min-width: 620px) and (orientation: landscape)
+{
+    .core-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    }
+    .member{
+        height: 300px;
+        width: 250px;
+    }
+}
+@media only screen and (min-width: 880px) and (orientation: landscape)
+{
+    .core-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    }
+    .member{
+        height: 300px;
+        width: 250px;
+    }
+}
+@media only screen and (min-width: 1140px) and (orientation: landscape)
+{
+    .core-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    }
+    .member{
+        height: 300px;
+        width: 250px;
+    }
+}
+@media only screen and (orientation: portrait)
+{
+    .core-container {
+        display: block;
+    }
+}
